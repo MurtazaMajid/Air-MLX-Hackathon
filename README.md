@@ -11,7 +11,7 @@
 
 A one-day hackathon hosted by Air University, Islamabad as part of MLX 2025. The task was to predict `invalid_ratio`, the proportion of invalid parking events at a given location and time, using data spread across five relational SQLite tables.
 
-A `.db` file, a baseline to beat, and 2 hours to do it.
+A `.db` file, a baseline to beat, and a few hours to do it.
 
 ---
 
@@ -58,6 +58,32 @@ Winning RMSE: 0.13
 | **Linear Regression with PCA** | **0.13** |
 
 Reducing the noisy sensor columns with PCA while retaining 95% of variance gave the best result.
+
+---
+
+## Visualisations
+
+**Parking Events by Hour of Day**
+
+Peak activity at 13:00, with the lunch hour accounting for a significant proportion of all recorded events.
+
+![Parking Events by Hour](https://raw.githubusercontent.com/MurtazaMajid/Air-MLX-Hackathon-/main/Images/parking_events_by_hour.png)
+
+---
+
+**Parking Events by Day of Week**
+
+One day of the week shows a disproportionately high number of events compared to the rest, suggesting a systematic data pattern worth investigating further.
+
+![Parking Events by Day of Week](https://raw.githubusercontent.com/MurtazaMajid/Air-MLX-Hackathon-/main/Images/parking_events_by_day_of_week_single.png)
+
+---
+
+**Feels Like Temperature — Distribution and Outlier Check**
+
+Temperature is concentrated between 15 and 20 degrees with a sharp spike around 18. The box plot confirms no extreme outliers, making mean imputation a safe choice for this column.
+
+![Temperature Distribution](https://raw.githubusercontent.com/MurtazaMajid/Air-MLX-Hackathon-/main/Images/feels_like_temp_distribution_outliers.png)
 
 ---
 
